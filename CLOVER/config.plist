@@ -5,121 +5,25 @@
 	<key>ACPI</key>
 	<dict>
 		<key>AutoMerge</key>
-		<true/>
+		<false/>
 		<key>DSDT</key>
 		<dict>
 			<key>Fixes</key>
 			<dict>
-				<key>AddPNLF</key>
-				<true/>
-				<key>FixAirport</key>
-				<false/>
-				<key>FixIPIC</key>
-				<true/>
 				<key>FixRTC</key>
-				<true/>
-				<key>FixWAK</key>
 				<true/>
 			</dict>
 			<key>Patches</key>
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>change _OSI to XOSI, pair with SSDT-XOSI.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X09TSQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WE9TSQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change _DSM to XDSM</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					X0RTTQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WERTTQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change HECI to IMEI</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					SEVDSQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					SU1FSQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					R0ZYMA==
-					</data>
-					<key>Replace</key>
-					<data>
-					SUdQVQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change HDAS to HDEF, optionally pair with SSDT-HDEF.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					SERBUw==
-					</data>
-					<key>Replace</key>
-					<data>
-					SERFRg==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					R1BSVwI=
-					</data>
+					<data>R1BSVwI=</data>
 					<key>Replace</key>
-					<data>
-					WFBSVwI=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change EC0 to EC</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					RUMwXw==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUNfXw==
-					</data>
+					<data>WFBSVwI=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -127,13 +31,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					U01SRAQ=
-					</data>
+					<data>U01SRAQ=</data>
 					<key>Replace</key>
-					<data>
-					WE1SRAQ=
-					</data>
+					<data>WE1SRAQ=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -141,41 +41,19 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					U01XUgQ=
-					</data>
+					<data>U01XUgQ=</data>
 					<key>Replace</key>
-					<data>
-					WE1XUgQ=
-					</data>
+					<data>WE1XUgQ=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(INIT,0,S) to XNIT</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					SU5JVAg=
-					</data>
-					<key>Replace</key>
-					<data>
-					WE5JVAg=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change ADJT to XDJT for Battery Hotpatch</string>
+					<string>change ADJT to XDJT for HP Battery Hotpatch</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					QURKVAigQw==
-					</data>
+					<data>QURKVAigQw==</data>
 					<key>Replace</key>
-					<data>
-					WERKVAigQw==
-					</data>
+					<data>WERKVAigQw==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -183,27 +61,19 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					Q0xSSQg=
-					</data>
+					<data>Q0xSSQg=</data>
 					<key>Replace</key>
-					<data>
-					WExSSQg=
-					</data>
+					<data>WExSSQg=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change _BST to XBST for Battery Hotpatch</string>
+					<string>change _BST to XBST for HP Battery Hotpatch</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					X0JTVACgNw==
-					</data>
+					<data>X0JTVACgNw==</data>
 					<key>Replace</key>
-					<data>
-					WEJTVACgNw==
-					</data>
+					<data>WEJTVACgNw==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -211,13 +81,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					VVBCSQA=
-					</data>
+					<data>VVBCSQA=</data>
 					<key>Replace</key>
-					<data>
-					WFBCSQA=
-					</data>
+					<data>WFBCSQA=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -225,41 +91,29 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					VVBCUwA=
-					</data>
+					<data>VVBCUwA=</data>
 					<key>Replace</key>
-					<data>
-					WFBCUwA=
-					</data>
+					<data>WFBCUwA=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_Q10,0,N) to XQ10, pair with SSDT-FN.aml</string>
+					<string>change Method(_Q10,0,N) to XQ10, pair with SSDT-BKey.aml</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					X1ExMAA=
-					</data>
+					<data>X1ExMAA=</data>
 					<key>Replace</key>
-					<data>
-					WFExMAA=
-					</data>
+					<data>WFExMAA=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_Q11,0,N) to XQ11, pair with SSDT-FN.aml</string>
+					<string>change Method(_Q11,0,N) to XQ11, pair with SSDT-Bkey.aml</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					X1ExMQA=
-					</data>
+					<data>X1ExMQA=</data>
 					<key>Replace</key>
-					<data>
-					WFExMQA=
-					</data>
+					<data>WFExMQA=</data>
 				</dict>
 			</array>
 		</dict>
@@ -267,44 +121,29 @@
 		<array>
 			<dict>
 				<key>Signature</key>
-				<string>#MCFG</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
 				<string>DMAR</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>xh_rvp10</string>
 			</dict>
 		</array>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
 			<false/>
-			<key>Generate</key>
-			<dict>
-				<key>PluginType</key>
-				<true/>
-			</dict>
-			<key>PluginType</key>
-			<string>1</string>
 		</dict>
 		<key>SortedOrder</key>
 		<array>
-			<string>SSDT-XOSI.aml</string>
-			<string>SSDT-BATT.aml</string>
-			<string>SSDT-FN.aml</string>
-			<string>SSDT-UIAC.aml</string>
+			<string>SSDT-EC.aml</string>
+			<string>SSDT-SBUS.aml</string>
 			<string>SSDT-GPRW.aml</string>
+			<string>SSDT-BAT0.aml</string>
+			<string>SSDT-BKey.aml</string>
+			<string>SSDT-PNLF.aml</string>
+			<string>SSDT-XCPM.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 -wegnoegpu brcmfx-country=#a</string>
+		<string>dart=0 darkwake=0 -wegnoegpu brcmfx-country=#a</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Legacy</key>
@@ -336,25 +175,50 @@
 		<key>Audio</key>
 		<dict>
 			<key>AFGLowPowerState</key>
-			<true/>
+			<false/>
 			<key>Inject</key>
-			<integer>13</integer>
+			<string>No</string>
 			<key>ResetHDA</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>FakeID</key>
 		<dict>
 			<key>#Kaby Lake-Comment</key>
 			<string>To avoid automatic Clover fake device-id (Skylake) injection</string>
 		</dict>
+		<key>Properties</key>
+		<dict>
+			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>hda-idle-support</key>
+				<string>1</string>
+				<key>layout-id</key>
+				<integer>13</integer>
+				<key>model</key>
+				<string>Intel CM238 HD Audio Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>AAAbWQ==</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+			</dict>
+		</dict>
 		<key>SetIntelBacklight</key>
-		<true/>
+		<false/>
 		<key>SetIntelMaxBacklight</key>
-		<true/>
+		<false/>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
-			<true/>
+			<false/>
 			<key>FixOwnership</key>
 			<true/>
 			<key>Inject</key>
@@ -425,7 +289,7 @@
 			<key>ATI</key>
 			<false/>
 			<key>Intel</key>
-			<true/>
+			<false/>
 			<key>NVidia</key>
 			<false/>
 		</dict>
@@ -437,8 +301,6 @@
 		<false/>
 		<key>NvidiaSingle</key>
 		<false/>
-		<key>ig-platform-id</key>
-		<string>0x591B0000</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -460,13 +322,9 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
-				<data>
-				ILniAAAADzA=
-				</data>
+				<data>ILniAAAADzA=</data>
 				<key>Replace</key>
-				<data>
-				ILniAAAAkJA=
-				</data>
+				<data>ILniAAAAkJA=</data>
 			</dict>
 		</array>
 		<key>KernelXCPM</key>
@@ -479,17 +337,13 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
-				<data>
-				AEFQUExFIFNTRAA=
-				</data>
+				<data>AEFQUExFIFNTRAA=</data>
 				<key>InfoPlistPatch</key>
 				<false/>
 				<key>Name</key>
 				<string>com.apple.iokit.IOAHCIBlockStorage</string>
 				<key>Replace</key>
-				<data>
-				AAAAAAAAAAAAAAA=
-				</data>
+				<data>AAAAAAAAAAAAAAA=</data>
 			</dict>
 		</array>
 	</dict>
