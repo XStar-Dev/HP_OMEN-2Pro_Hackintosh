@@ -200,6 +200,8 @@
 				<integer>13</integer>
 				<key>model</key>
 				<string>Intel CM238 HD Audio Controller</string>
+				<key>name</key>
+				<string>Realtek ALC295</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
