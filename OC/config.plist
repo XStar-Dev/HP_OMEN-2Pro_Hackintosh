@@ -24,7 +24,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Inject SBUS-BUS0</string>
+				<string>Fake AppleSMBus</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -32,7 +32,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>6D/0D Hotpatch for Sleep</string>
+				<string>0D/6D Hotpatch for Sleep</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -64,7 +64,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Inject X86</string>
+				<string>Inject X86 Power Manager</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -811,7 +811,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>dartt=0 darkwake=0 -wegnoegpu brcmfx-country=#a</string>
+				<string>dart=0 darkwake=0 -wegnoegpu brcmfx-country=#a</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>nvda_drv</key>
