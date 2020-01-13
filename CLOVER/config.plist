@@ -135,9 +135,10 @@
 			<string>SSDT-SBUS.aml</string>
 			<string>SSDT-GPRW.aml</string>
 			<string>SSDT-BAT0.aml</string>
-			<string>SSDT-BKey.aml</string>
 			<string>SSDT-PNLF.aml</string>
+			<string>SSDT-BKey.aml</string>
 			<string>SSDT-XCPM.aml</string>
+			<string>SSDT-DRP05.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>

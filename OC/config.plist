@@ -70,6 +70,14 @@
 				<key>Path</key>
 				<string>SSDT-XCPM.aml</string>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable Invalid SD Reader</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-DRP05.aml</string>
+			</dict>
 		</array>
 		<key>Block</key>
 		<array>
@@ -360,7 +368,7 @@
 			<key>RebaseRegions</key>
 			<false/>
 			<key>ResetHwSig</key>
-			<false/>
+			<true/>
 			<key>ResetLogoStatus</key>
 			<false/>
 		</dict>
