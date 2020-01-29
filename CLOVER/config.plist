@@ -17,16 +17,6 @@
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>R1BSVwI=</data>
-					<key>Replace</key>
-					<data>WFBSVwI=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change Method(SMRD,4,N) to XMRD</string>
 					<key>Disabled</key>
 					<false/>
@@ -133,7 +123,6 @@
 		<array>
 			<string>SSDT-EC-USBX.aml</string>
 			<string>SSDT-SBUS.aml</string>
-			<string>SSDT-GPRW.aml</string>
 			<string>SSDT-BAT0.aml</string>
 			<string>SSDT-PNLF.aml</string>
 			<string>SSDT-BKey.aml</string>
@@ -356,6 +345,8 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
+		<key>ROM</key>
+		<data>mCyw4IzY</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
@@ -370,7 +361,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02836600CDJ1JHJC</string>
+		<string>C027444034NJ1JH1H</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -400,16 +391,16 @@
 		<key>ProductName</key>
 		<string>MacBookPro14,3</string>
 		<key>SerialNumber</key>
-		<string>C02XC00EHTD5</string>
+		<string>C02VM05GHTD5</string>
 		<key>SmUUID</key>
-		<string>EB5E3ED7-190D-4FB3-AEA6-37B5C956E3FC</string>
+		<string>5AD38565-CB8E-4F0F-8AAE-5292D5E08CD8</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
 		<key>CustomUUID</key>
-		<string>D22F57D0-C8AC-5945-A1E2-BF31E18A5A50</string>
+		<string>35434437-3137-3135-4B4A-4A3537314435</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
