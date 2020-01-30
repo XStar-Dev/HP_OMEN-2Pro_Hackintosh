@@ -17,7 +17,7 @@
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(SMRD,4,N) to XMRD</string>
+					<string>Battery : SMRD,4,N to XMRD</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -27,7 +27,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(SMWR,4,N) to XMWR</string>
+					<string>Battery : SMWR,4,N to XMWR</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -37,7 +37,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change ADJT to XDJT for HP Battery Hotpatch</string>
+					<string>Battery(HP) : ADJT,0,S to XDJT</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -47,7 +47,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(CLRI,0,S) to XLRI</string>
+					<string>Battery : CLRI,0,S to XLRI</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -57,7 +57,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change _BST to XBST for HP Battery Hotpatch</string>
+					<string>Battery(HP) : _BST,0,N to XBST</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -67,7 +67,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(UPBI,0,N) to XPBI</string>
+					<string>Battery : UPBI,0,N to XPBI</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -77,7 +77,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(UPBS,0,N) to XPBS</string>
+					<string>Battery : UPBS,0,N to XPBS</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -87,7 +87,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_Q10,0,N) to XQ10, pair with SSDT-BKey.aml</string>
+					<string>Brightness Key : _Q10,0,N to XQ10</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -97,7 +97,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_Q11,0,N) to XQ11, pair with SSDT-Bkey.aml</string>
+					<string>Brightness Key : _Q11,0,N to XQ11</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>

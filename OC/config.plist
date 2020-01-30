@@ -16,7 +16,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Fake EC Device for USB Power Control</string>
+				<string>Fake EC Device for USB Power Management</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -32,7 +32,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Battery Hotpatch</string>
+				<string>Hotpatch for Battery</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -48,7 +48,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Brightness Key Hotpatch</string>
+				<string>Hotpatch for Brightness Key</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -56,7 +56,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Inject X86 Power Manager</string>
+				<string>Inject X86 CPU Power Management</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -92,7 +92,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Battery:SMRD to XMRD</string>
+				<string>Battery : SMRD,4,N to XMRD</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -118,7 +118,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Battery:SWMR to XWMR</string>
+				<string>Battery : SWMR,4,N to XWMR</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -144,7 +144,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Battery:ADJT to XDJT</string>
+				<string>Battery(HP) : ADJT,0,S to XDJT</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -170,7 +170,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Battery:CLRI to XLRI</string>
+				<string>Battery : CLRI,0,S to XLRI</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -196,7 +196,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Battery:_BST to XBST</string>
+				<string>Battery(HP) : _BST,0,N to XBST</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -222,7 +222,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Battery:UPBI to XPBI</string>
+				<string>Battery : UPBI,0,N to XPBI</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -248,7 +248,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Battery:UPBS to XPBS</string>
+				<string>Battery : UPBS,0,N to XPBS</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -274,7 +274,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>BrightnessKey:_Q10 to XQ11</string>
+				<string>BrightnessKey : _Q10,0,N to XQ10</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -300,7 +300,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>BrightnessKey:_Q11 to XQ11</string>
+				<string>BrightnessKey : _Q11,0,N to XQ11</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -830,6 +830,8 @@
 		<dict/>
 		<key>Generic</key>
 		<dict>
+			<key>AdviseWindows</key>
+			<true/>
 			<key>MLB</key>
 			<string>C027444034NJ1JH1H</string>
 			<key>ROM</key>
