@@ -113,6 +113,10 @@
 				<key>Signature</key>
 				<string>DMAR</string>
 			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>CpuPm</string>
+			</dict>
 		</array>
 		<key>SSDT</key>
 		<dict>
