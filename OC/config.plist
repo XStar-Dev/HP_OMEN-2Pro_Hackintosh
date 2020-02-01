@@ -72,22 +72,7 @@
 			</dict>
 		</array>
 		<key>Block</key>
-		<array>
-			<dict>
-				<key>All</key>
-				<false/>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>OemTableId</key>
-				<data></data>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>RE1BUg==</data>
-			</dict>
-		</array>
+		<array/>
 		<key>Patch</key>
 		<array>
 			<dict>
@@ -837,7 +822,7 @@
 			<key>ROM</key>
 			<data>mCyw4IzY</data>
 			<key>SpoofVendor</key>
-			<true/>
+			<false/>
 			<key>SupportsCsm</key>
 			<false/>
 			<key>SystemProductName</key>

@@ -107,21 +107,17 @@
 				</dict>
 			</array>
 		</dict>
-		<key>DropTables</key>
-		<array>
-			<dict>
-				<key>Signature</key>
-				<string>DMAR</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>CpuPm</string>
-			</dict>
-		</array>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
 			<false/>
+			<key>Generate</key>
+			<dict>
+				<key>CStates</key>
+				<true/>
+				<key>PStates</key>
+				<true/>
+			</dict>
 		</dict>
 		<key>SortedOrder</key>
 		<array>
@@ -130,14 +126,13 @@
 			<string>SSDT-BAT0.aml</string>
 			<string>SSDT-PNLF.aml</string>
 			<string>SSDT-BKey.aml</string>
-			<string>SSDT-XCPM.aml</string>
 			<string>SSDT-DRP05.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 -wegnoegpu brcmfx-country=#a</string>
+		<string>-wegnoegpu brcmfx-country=#a</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Legacy</key>
@@ -403,12 +398,10 @@
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
-		<key>CustomUUID</key>
-		<string>35434437-3137-3135-4B4A-4A3537314435</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
-		<true/>
+		<false/>
 		<key>NvidiaWeb</key>
 		<true/>
 	</dict>
