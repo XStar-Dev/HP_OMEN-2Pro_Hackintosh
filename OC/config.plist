@@ -16,7 +16,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Fake EC Device for USB Power Management</string>
+				<string>Fake EC Device and Inject UPC for Apple Device Charge</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -56,7 +56,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Inject X86 CPU Power Management</string>
+				<string>Inject X86 for CPU Power Management</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -64,7 +64,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Disable Invalid SD Card Reader</string>
+				<string>Disable rarely used SD Card Reader</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -774,9 +774,9 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Name</key>
-				<string>UEFI Shell</string>
+				<string>Clean NVRAM</string>
 				<key>Path</key>
-				<string>Shell.efi</string>
+				<string>CleanNvram.efi</string>
 			</dict>
 		</array>
 	</dict>
