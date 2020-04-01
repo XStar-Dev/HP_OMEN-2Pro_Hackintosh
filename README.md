@@ -9,7 +9,7 @@
 | 主板 | HP 8259 ( BIOS Version F.53 ) | 2020.1 更新 |
 | CPU | i5 7300HQ 2.5GHz 4C4T  | 800-3500MHz |
 | 内存 | 8Gx2 DDR4 2400MHz | 额外加了一条 8G |
-| SSD | 西数黑盘NVMe二代 SN700 250G | NVMe SSD 默认开启 TRIM |
+| SSD | 西数黑盘 NVMe 二代 SN700 250G | NVMe SSD 默认开启 TRIM |
 | HDD | HGST 1T 7200r | \ |
 | 显卡 | Intel HD Graphics 630 + NVIDIA GeForce GTX 1050Ti | 通过 SSDT 关闭独显 |
 | 声卡 | Realtek ALC295  | A171 - CM238 HD Audio |
@@ -35,7 +35,7 @@
   - `CLOVER` 已支持，具体版本号见 `Release`
   - `OpenCore` 已支持，运行版本 `0.5.6`
 - 系统支持
-  - 理论支持 macOS High Sierra 10.13.6（17G65）- Catalina 10.15.3（19D76）之间的全部版本
+  - 理论支持 macOS High Sierra 10.13.6（17G65）- Catalina 10.15.4（19E266）之间的全部版本
   - 建议安装 macOS Mojave 10.14.6 或更高版本
 - 电源管理
   - CPU变频：已启用 X86 原生电源管理，将闲时频率从 1.2GHz 降低到 0.8GHz，并更改 `EPP` 为节能模式（0x80）
@@ -60,37 +60,43 @@
     - 相关驱动开发项目地址：WiFi [itlwm](https://github.com/zxystd/itlwm)（项目众多，这是其中之一），蓝牙 [IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware)
 - 声卡
   - `AppleALC` 基于黑果小兵 `ALC295` 的 `layout-id=13` 修改，已重新定制相关的布局文件，修复热启动时 CPU 占用过高问题
-  - 外放和耳机自动切换，麦克风需要手动切换（个人认为麦克风没必要自动切换）
-  - 添加 `VoodooHDA` 替代方案，可正常使用，使用电池时，睡眠唤醒后不会造成 CPU 占用过高问题
+    - 外放和耳机自动切换，麦克风需要手动切换（个人认为麦克风没必要自动切换）
+    - 使用电池睡眠唤醒时，会导致 `kernel_task` 进程 CPU 占用异常，造成耗电高且可能卡顿
+  - 添加 `VoodooHDA` 替代方案，可正常使用，使用电池时，睡眠唤醒后不会造成 CPU 占用过高问题（`VoodooHDA` 外放声音较小，需要调整参数，具体请自行查找资料）
+  - 当前 `OpenCore` 默认使用 `VoodooHDA`，音频输出（外放或者耳机）需手动切换，请注意
+  - 热启动外放无声问题是由于 Windows 的声卡驱动造成的，并不是什么特殊情况，很多机器都有，似乎热启动之前拔掉耳机就行
 - 触摸板
   - 使用支持 `MT2` 引擎的 `VoodooPS2` 驱动，可使用原生手势（单指轻点、双指滑动、三指滑动调度中心和 App Expose）
-  - 四指张合手势受硬件限制暂时无法使用，详见 [VoodooPS2](https://github.com/acidanthera/VoodooPS2) 项目的说明
+  - 四指张合手势受硬件限制暂时无法使用，但是已经在进一步的开发测试中了，由于 `Synaptics PS2` 触摸板自身问题导致手指信息报告异常，需要等大佬解决。
 
 ## Instruction 使用说明
 
 - 建议所有机友更新 `BIOS` 和 `ME` 固件，链接: <https://pan.baidu.com/s/1-YOJ03WB5NMPURKfWB6RDA> 提取码: 4dga
   - 请通过 `BIOS` 直接引导 `Windows` 运行更新程序（`OC` 会注入苹果 `SMBIOS` 信息导致更新程序无法通过验证）
   - 更新完后记得检查 `BIOS` 中的 `安全启动` 是否已经关闭
-- 请不要使用覆盖的方式更新你的 EFI，请先删除原来的文件再拷贝 EFI 进去，避免一些奇怪的问题
-- 使用 SATA SSD 时，请打开终端输入 `sudo trimforce enable` 手动开启 `TRIM`
-- 请不要随意更改 `SMBIOS`，因为这会影响到机型的识别，核显的驱动以及 USB 的定制，除非你自己会修改这些东西
-- 为了能更好地获得 `macOS` 的体验，请自行查找关于白果三码的教程，用于激活 `macOS` 下的 `iMessage` 和 `FaceTime`
+- **由于 ACPI 部分文件变动较大，请先删除原来的 EFI 文件再拷贝新的 EFI 进去，避免出现异常错误导致无法开机**
+- **请不要随意更改 `SMBIOS`，因为这会影响到机型的识别，核显的驱动以及 USB 的定制，除非你自己会修改这些东西**
 - 通过 ACPI Hotpatch，OpenCore 现在已经可以成功引导 `Windows` 了，注意事项如下：
   - 需要自己手动根据电脑的 `硬件UUID` 修改配置文件中的 `SmUUID`，否则很可能影响你的 `Windows` 系统以及电脑上众多软件的激活情况
   - 通过 `OpenCore` 引导的 `Windows` 系统将被识别为你 `SMBIOS` 所选的苹果机型，若造成系统运行不稳定的情况请自行调试
   - 如果需要双系统无缝切换，建议将 `OpenCore` 设置为第一引导
-- BrcmPatchRAM3 仅适用于 `macOS Catalina`，如果使用低版本系统出现问题，请更换合适的驱动，并记得更改 `config.plist` 中的 `Kernel` - `Add` 列表的对应项
 
 ## FAQ
 
 - 独显 GTX1050/1050Ti/RX460 和 HDMI 问题
-  - 由于 `VBIOS` 集成到了主板 `BIOS` 中，无法直接读取，因此无法驱动独显，目前未能找到解决方案（HDMI接口挂在独显上，所以也不能外接显示器）
+  - 由于独显的 `VBIOS` 集成到了主板 `BIOS` 中，无法直接读取，因此无法驱动独显，目前未能找到解决方案（HDMI接口挂在独显上，所以也不能外接显示器）
 - 无线网卡 替代方案说明
   - DW1560（BCM94352Z）测试通过，基本没有问题，但是目前价格虚高，谨慎购买
   - DW1820A（BCM94350ZAE）热启动正常工作，冷启动硬件由于不明原因造成机器卡死（猜测是无线部分初始化失败导致：当引导参数添加 `brcmfx-driver=0` 即禁用博通网卡驱动加载时，冷启动可正常进入系统，蓝牙设备也能正常工作，取消引导参数再度重启恢复驱动加载，不再卡死，可正常使用）
   - 白果拆机卡（BCM94360cs2）完全免驱，但是我们的机子空间受限，如果你动手能力强可以选择飞线，没有这个技术就算了，操作不当的话，可能会损坏其它硬件
+  - `BrcmPatchRAM3.kext` 仅适用于 `macOS Catalina`，如果使用低版本系统出现问题，请更换合适的驱动，并记得更改 `config.plist` 中的 `Kernel` - `Add` 列表的对应项
 - 读卡器
   - EFI 不带驱动，需要使用请自行寻找驱动（Sinetek-rtsx.kext）
+- Windows 和 macOS 时间不同步
+  - Windows 中打开命令行，输入 Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
+  - 重启到 macOS，联网同步时间，再次进入 Windows 即可正常显示时间
+- 使用 SATA SSD 时，请打开终端输入 `sudo trimforce enable` 手动开启 `TRIM`
+- `macOS` 下的 `iMessage` 和 `FaceTime`，通常需要修改 `序列号` 和 `MLB`，请自行查找相关教程
 
 ## 如果你有发现任何新问题，请提交issue，我将跟进修复
 
