@@ -15,17 +15,13 @@
 | 声卡 | Realtek ALC295  | A171 - CM238 HD Audio |
 | 网卡 | Realtek RTL8111H + BCM94352z  | 暂时换下原装的 7265AC |
 
-## Recent Updates 最近更新
+## 更新说明
 
-- 更新 `OpenCore` 到 0.5.7 正式版，启用 `WriteFlash` 使启动磁盘能正常工作
-- 通过 Device Properties 注入 AHCI 和 SSD Controller 信息，仅仅只是好看，并没有任何性能提升
-- 自编译 `VoodooInput` 和 `VoodooPS2`，修复 Synaptics PS2 触摸板手指信息报告错误问题，感谢 @Goshin 大神的指导（**现在你可以使用四指手势了，但是由于四指是模拟出来的，不是很好触发**）
-- 自编译 `AppleALC`，取代 `VoodooHDA` 工作，已确认仅当热启动且使用电池时，睡眠唤醒后会造成 CPU 高频运行，所以请尽量避免这种情况
-
-## 关于 CLOVER
-
-- `acidanthera` 的团队宣布他们后续版本的 `Lilu`、`VirtualSMC` 等内核扩展程序将不再在 `CLOVER` 上进行测试，无法保证 `CLOVER` 上驱动的兼容性
-- `CLOVER` 的 EFI 文件现在已经打包添加到本仓库的 `Release` 专栏（不定期更新，除非有重要修复和调整，针对国内网络，附有网盘链接），同时从仓库代码中移除相关文件
+- 更新 `OpenCore` 到 0.6.0 正式版
+- 更新三大核心驱动（`Lilu` `VirtualSMC` `WhateverGreen`）和 PS2键盘触摸板驱动（看 `commit` 应该是有优化）
+- 移除 `Release` 里面的 `CLOVER` 引导包，不再进行研究
+- 因下半年有特殊安排，本 EFI 暂时将不再维护更新，需要更新的小伙伴自行替换 OpenCore 核心文件和 `Kexts` 里面的驱动
+- 引用或转发本 EFI 请务必注明出处，所有内容仅供个人使用和学习参考，严禁用于商业用途（tb奸商先死个ma）
 
 ## 关于 声卡与热启动
 
@@ -38,10 +34,9 @@
 ## Progress 进展
 
 - 引导方式
-  - `CLOVER` 已支持，具体版本号见 `Release`
-  - `OpenCore` 已支持，运行版本 `0.5.7`
+  - `OpenCore` 已支持，运行版本 `0.6.0`
 - 系统支持
-  - 理论支持 macOS High Sierra 10.13.6（17G65）- Catalina 10.15.4（19E287）之间的全部版本
+  - 理论支持 macOS High Sierra 10.13.6（17G65）- Catalina 10.15.6（19G2021）之间的全部版本
   - 建议安装 macOS Mojave 10.14.6 或更高版本
 - 电源管理
   - CPU变频：已启用 X86 原生电源管理，将闲时频率从 1.2GHz 降低到 0.8GHz，并更改 `EPP` 为节能模式（0x80）
